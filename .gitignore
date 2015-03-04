@@ -1,0 +1,15 @@
+.com.apple.*
+.DS_Store
+*.tmp
+*.~vsdx
+~$*
+*.bak
+hooks/*
+platforms/*
+plugins/*
+.idea/*
+bower_components/*
+node_modules/*
+npm-debug.log
+git_hints
+
