@@ -1,4 +1,15 @@
-##Title
+##angular-cordova-seed
+Is just another Angular Cordova Seed Project. I am currently working on it.
+I will be using:
+* Angular JS
+* Sass or Less
+* Karma Jasmine (Jasmine Given) for unit testing
+* mobileangularui for the UI
+* grunt as task runner
+* angular ui router
+
+Links to the other projects are following...
+
 Angular best practises according to:
 [18 Tips For The Angular Architect](https://www.youtube.com/watch?v=MpI3HKDVZm0)
 
@@ -27,7 +38,8 @@ Use Grunt
 * .cnst
 * .val
 * .mock
-´´´
+
+```
 scripts/
     assets/
     vendor/
@@ -45,7 +57,7 @@ scripts/
                 product-list.tpl.html
                 product-list.ctrl.js
                 product-list.sass
-´´´
+```
 
 ```javascript
 angular.module("myApp")
