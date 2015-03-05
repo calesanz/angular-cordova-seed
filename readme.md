@@ -29,6 +29,12 @@ Use Grunt
 ##Common Links Errors and Bugfix helps
 [Error: ngareq fn is not a function got string](http://chawi3.com/2015/02/17/error-ngareq-argument-fn-is-not-a-function-got-string)
 
+##Namespaces
+<appName>.core.controller
+<appName>.common.service
+<appName>.common.directive
+
+
 ##Suffixes
 * .drv
 * .tpl
@@ -40,7 +46,7 @@ Use Grunt
 * .mock
 
 ```
-scripts/
+src/
     assets/
     vendor/
     common/

@@ -26,6 +26,7 @@ require.config({
         angularUiRouter: '../bower_components/angular-ui-router/release/angular-ui-router',
         angularMocks: '../bower_components/angular-mocks/angular-mocks',
         text: '../bower_components/requirejs-text/text'
+
     },
     shim: {
         'angular' : {'exports' : 'angular'},

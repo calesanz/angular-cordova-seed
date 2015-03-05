@@ -1,27 +1,26 @@
-
 'use strict';
 define([
     'angular',
-    'angularUiRouter'
-], function(angular) {
+    'angularUiRouter',
+    'core/product/product-list/product-list.ctrl'
+], function (angular) {
 
-    return angular.module('demoApp', ['ui.router']
-    ).config(['$stateProvider',"$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
+    var app = angular.module('demoApp', ['ui.router','demoApp.core.productList']);
+    app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
-            $urlRouterProvider.otherwise("/main");
+        $urlRouterProvider.otherwise( "/main");
 
 
-            $stateProvider.state('main', {
-                templateProvider: function ($stateParams) {
-                    throw new Error("tüüp");
-                    return $stateParams.type + ".tpl.html";
-                },
-                controllerProvider: function($stateParams) {
-                    throw new Error("tüüp");
-                    return $stateParams.type + ".ctrl.js";
+        $stateProvider.state('main', {
+            templateUrl: "core/product/product-list/product-list.tpl.html",
+            controller: "demoApp.core.productList.productListCtrl"
+        }
+        );
 
-                }
-            });
 
     }]);
+    app.run(['$state', function ($state) {
+        $state.go('main');
+    }]);
+    return app;
 });
