@@ -1,4 +1,5 @@
 define(['angular','angularMocks','demoApp','./product-list.ctrl'], function() {
+    'use strict';
     describe("Product List Test", function(){
 
         it("should be true", function(){

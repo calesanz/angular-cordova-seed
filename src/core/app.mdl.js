@@ -1,10 +1,10 @@
-'use strict';
+
 define([
     'angular',
     'angularUiRouter',
     'core/product/product-list/product-list.ctrl'
 ], function (angular) {
-
+    'use strict';
     var app = angular.module('demoApp', ['ui.router','demoApp.core.productList']);
     app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 

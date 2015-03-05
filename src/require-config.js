@@ -1,4 +1,4 @@
-'use strict';
+
 
 if(window.__karma__) {
 
@@ -48,7 +48,7 @@ require.config({
 require([
         'angular',
         'demoApp'
-    ], function(angular, demoApp) {
+    ], function(angular) {
 
         angular.bootstrap(document, ['demoApp']);
 

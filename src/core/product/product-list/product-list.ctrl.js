@@ -1,9 +1,9 @@
 /**
  * Created by elias on 05.03.2015.
  */
-'use strict';
-define(['angular'], function (ng) {
 
+define(['angular'], function (ng) {
+    'use strict';
     var mdl = ng.module('demoApp.core.productList',[]);
 
 
