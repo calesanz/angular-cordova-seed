@@ -15,7 +15,7 @@ define(['angular','angularMocks','demoApp','./product-list.ctrl'], function() {
 
 
         beforeEach(module('demoApp'));
-        beforeEach(module('demoApp.core.productList'));
+        beforeEach(module('demoApp.core.product'));
 
 
 
@@ -26,7 +26,7 @@ define(['angular','angularMocks','demoApp','./product-list.ctrl'], function() {
         }));
 
         it("should have products", function () {
-           var vm = $controllerConstructor('demoApp.core.productList.productListCtrl', {$scope:scope});
+           var vm = $controllerConstructor('demoApp.core.product.productListCtrl', {$scope:scope});
             expect(vm.products).toEqual("bla.bla.bla");
 
         });

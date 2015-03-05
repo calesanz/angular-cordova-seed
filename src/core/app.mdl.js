@@ -2,25 +2,33 @@
 define([
     'angular',
     'angularUiRouter',
-    'core/product/product-list/product-list.ctrl'
+    'core/product/product.ctrl',
+    'core/product/product-list/product-list.ctrl',
 ], function (angular) {
     'use strict';
-    var app = angular.module('demoApp', ['ui.router','demoApp.core.productList']);
+    var app = angular.module('demoApp', ['ui.router','demoApp.core.product']);
     app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
-        $urlRouterProvider.otherwise( "/main");
+        $urlRouterProvider.otherwise( "/");
 
 
-        $stateProvider.state('main', {
-            templateUrl: "core/product/product-list/product-list.tpl.html",
-            controller: "demoApp.core.productList.productListCtrl"
-        }
-        );
+
+        $stateProvider
+            .state('product', {
+                abstract: true,
+
+                templateUrl: "core/product/product.tpl.html",
+                controller:"demoApp.core.product.productCtrl"
+            })
+            .state('product.list', {
+                templateUrl: "core/product/product-list/product-list.tpl.html",
+                controller: "demoApp.core.product.productListCtrl"
+        });
 
 
     }]);
     app.run(['$state', function ($state) {
-        $state.go('main');
+        $state.go('product.list');
     }]);
     return app;
 });
