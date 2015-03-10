@@ -2,11 +2,12 @@
 define([
     'angular',
     'angularUiRouter',
+    'mobileAngularUi',
     'core/product/product.ctrl',
     'core/product/product-list/product-list.ctrl',
 ], function (angular) {
     'use strict';
-    var app = angular.module('demoApp', ['ui.router','demoApp.core.product']);
+    var app = angular.module('demoApp', ['ui.router','mobile-angular-ui','demoApp.core.product']);
     app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
         $urlRouterProvider.otherwise( "/");

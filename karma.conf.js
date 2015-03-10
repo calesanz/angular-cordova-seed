@@ -19,6 +19,7 @@ module.exports = function (config) {
 
             {pattern: 'bower_components/angular-mocks/angular-mocks.js', included: false},
             {pattern: 'bower_components/angular-ui-router/release/angular-ui-router.js', included: false},
+            {pattern: 'bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.js', included: false},
             {pattern: 'src/core/app.mdl.js', included: false},
             {pattern: 'src/core/**/*.js', included: false},
             {pattern: 'src/core/**/*.test.js', included: false},

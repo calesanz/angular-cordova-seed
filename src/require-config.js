@@ -25,13 +25,20 @@ require.config({
         angular: '../bower_components/angular/angular',
         angularUiRouter: '../bower_components/angular-ui-router/release/angular-ui-router',
         angularMocks: '../bower_components/angular-mocks/angular-mocks',
-        text: '../bower_components/requirejs-text/text'
+        text: '../bower_components/requirejs-text/text',
+
+        mobileAngularUi:'../bower_components/mobile-angular-ui/dist/js/mobile-angular-ui'
+
 
     },
     shim: {
         'angular' : {'exports' : 'angular'},
         'angularUiRouter': ['angular'],
-        'demoApp' :{'deps': ['angular','angularUiRouter']},
+        'mobileAngularUi': {
+            deps:['angular'],
+            'exports':'mobileAngularUi'
+        },
+        'demoApp' :{'deps': ['angular','angularUiRouter','mobileAngularUi']},
         'angularMocks': {
             deps:['angular'],
             'exports':'angular.mock'

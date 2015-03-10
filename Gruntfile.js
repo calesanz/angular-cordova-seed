@@ -7,13 +7,7 @@ module.exports = function (grunt) {
         clean: {
             build: ['www/']
         },
-        // Built stylesheets with less
-        less: {
-            build: {
-                src: 'src/assets/less/*',
-                dest: 'www/css/app.css'
-            }
-        },
+
         // Build the site using grunt-includes
         includes: {
             build: {
@@ -56,13 +50,12 @@ module.exports = function (grunt) {
 
     // Load plugins used by this task gruntfile
     grunt.loadNpmTasks('grunt-includes');
-    grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
 
     // Task definitions
-    grunt.registerTask('build', ['clean', 'less', 'jshint','requirejs', 'includes']);
+    grunt.registerTask('build', ['clean', 'jshint','requirejs', 'includes']);
     grunt.registerTask('default', ['build']);
 
 };
